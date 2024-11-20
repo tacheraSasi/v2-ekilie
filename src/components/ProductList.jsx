@@ -10,6 +10,9 @@ const ProductList = () => {
       <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-3 gap-y-4 sm:grid-cols-2 lg:grid-cols-3 lg:max-w-[1200px]">
         {products.map((product) => (
           <Card
+            onClick={()=>{
+              console.log("The product clicked is ",product.name)
+            }}
             key={product.name}
             className="relative border cursor-pointer border-neutral-300 dark:border-neutral-700 rounded-lg p-4 transition-shadow duration-300"
           >

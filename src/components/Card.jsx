@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Card = ({ children, className }) => {
+const Card = ({ children, className, onClick }) => {
   // State to track the cursor position relative to the card
   const [hoverPosition, setHoverPosition] = useState({ x: 0, y: 0 });
 
@@ -67,6 +67,7 @@ const Card = ({ children, className }) => {
       className={`relative bg-white w-full dark:bg-neutral-900 overflow-hidden shadow-sm sm:rounded-lg mx-auto sm:px-6 lg:px-8 mb-3 mt-2 ${className}`}
       onMouseMove={handleMouseMove}
       onMouseLeave={clearHoverPosition}
+      onClick={onClick}
       style={{
         position: "relative",
         transition:
