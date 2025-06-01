@@ -1,7 +1,7 @@
 import { products } from '../lib/products';
 import Card from './Card';
 
-const ProductList = () => {
+const ProductList: React.FC = () => {
   return (
     <div className='mt-2 p-4' id='explore'>
       <h2 className="text-2xl font-bold text-center mb-6 text-neutral-900 dark:text-neutral-100">
@@ -10,8 +10,8 @@ const ProductList = () => {
       <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-3 gap-y-4 sm:grid-cols-2 lg:grid-cols-3 lg:max-w-[1200px]">
         {products.map((product) => (
           <Card
-            onClick={()=>{
-              console.log("The product clicked is ",product.name)
+            onClick={() => {
+              console.log("The product clicked is ", product.name);
             }}
             key={product.name}
             className="relative border cursor-pointer border-neutral-300 dark:border-neutral-700 rounded-lg p-4 transition-shadow duration-300"
@@ -27,7 +27,7 @@ const ProductList = () => {
             </h4>
             <ul className="list-disc list-inside">
               {product.features.map((feature, index) => {
-                const Icon = feature.icon; 
+                const Icon = feature.icon;
                 return (
                   <li key={index} className="flex items-center mb-2">
                     <Icon className="w-4 h-4 text-customGreenDark dark:text-customGreenLight" />

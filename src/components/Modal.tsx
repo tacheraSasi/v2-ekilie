@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-const Modal = () => {
+const Modal: React.FC = () => {
   return (
-    <div>Modal</div>
-  )
-}
+    <div>
+      <h1>Modal</h1>
+    </div>
+  );
+};
 
-export default Modal
+export default Modal;

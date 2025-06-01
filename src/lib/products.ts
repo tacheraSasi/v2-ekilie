@@ -1,70 +1,55 @@
 import { MessageSquare, User, Clock, CheckCircle } from "lucide-react";
 
-export const products = [
+interface Feature {
+  icon: React.ComponentType;
+  text: string;
+}
+
+interface Product {
+  name: string;
+  description: string;
+  features: Feature[];
+}
+
+export const products: Product[] = [
   {
     name: "ekiliSense",
-    description:
-      "An AI-driven school management system that enhances learning experiences.",
+    description: "Advanced sensing technology for real-time data collection.",
     features: [
-      { icon: User, text: "Student management" },
-      { icon: CheckCircle, text: "Automated grading" },
-      { icon: MessageSquare, text: "Real-time feedback" },
-      { icon: Clock, text: "Customizable dashboards" },
-    ],
-  },
-  {
-    name: "ekiliConvo",
-    description:
-      "A powerful messaging platform for real-time communication, perfect for teams and communities.",
-    features: [
-      { icon: MessageSquare, text: "Real-time messaging" },
+      { icon: MessageSquare, text: "Real-time data collection" },
       { icon: User, text: "User-friendly interface" },
-      { icon: Clock, text: "24/7 availability" },
-      { icon: CheckCircle, text: "Secure and reliable" },
-    ],
+      { icon: Clock, text: "24/7 monitoring" },
+      { icon: CheckCircle, text: "High accuracy" }
+    ]
   },
   {
     name: "ekiliRelay",
-    description:
-      "Streamline your communication with our email API service that integrates seamlessly into your applications.",
+    description: "Efficient data relay system for seamless communication.",
     features: [
-      { icon: MessageSquare, text: "Easy integration" },
-      { icon: CheckCircle, text: "High deliverability" },
-      { icon: Clock, text: "Instant notifications" },
-      { icon: User, text: "User-friendly dashboard" },
-    ],
+      { icon: MessageSquare, text: "Seamless communication" },
+      { icon: User, text: "Easy integration" },
+      { icon: Clock, text: "Fast data transfer" },
+      { icon: CheckCircle, text: "Reliable performance" }
+    ]
   },
   {
-    name: "ekiliLogs",
-    description:
-      "Manage attendance with ease using our tracking app, ensuring accountability and transparency.",
+    name: "ekiliConvo",
+    description: "Interactive conversation platform for enhanced user engagement.",
     features: [
-      { icon: User, text: "Track attendance" },
-      { icon: Clock, text: "Real-time reporting" },
-      { icon: CheckCircle, text: "Secure data management" },
-      { icon: MessageSquare, text: "Notifications for parents" },
-    ],
+      { icon: MessageSquare, text: "Interactive platform" },
+      { icon: User, text: "User engagement" },
+      { icon: Clock, text: "Real-time responses" },
+      { icon: CheckCircle, text: "Enhanced communication" }
+    ]
   },
   {
     name: "Insights",
-    description:
-      "Discover the best insights from our blog, offering tips and resources for students and educators.",
+    description: "Comprehensive analytics tool for data-driven decision making.",
     features: [
-      { icon: MessageSquare, text: "Latest educational trends" },
-      { icon: CheckCircle, text: "Expert tips and tricks" },
-      { icon: Clock, text: "In-depth articles" },
-      { icon: User, text: "Community engagement" },
-    ],
-  },
-  {
-    name: "ekiliSites",
-    description:
-      "A simple portfolio and landing page builder that allows users to create stunning web pages effortlessly.",
-    features: [
-      { icon: CheckCircle, text: "Drag-and-drop interface" },
-      { icon: Clock, text: "Fast loading times" },
-      { icon: User, text: "Responsive design" },
-      { icon: MessageSquare, text: "Customizable templates" },
-    ],
-  },
+      { icon: MessageSquare, text: "Data analytics" },
+      { icon: User, text: "User insights" },
+      { icon: Clock, text: "Historical data" },
+      { icon: CheckCircle, text: "Decision support" }
+    ]
+  }
 ];
