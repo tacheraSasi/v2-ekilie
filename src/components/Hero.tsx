@@ -1,9 +1,8 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import LinkButton from "./LinkButton";
-import { useEffect } from "react";
 
-const Hero = () => {
-  const [showLine, setShowLine] = useState(false);
+const Hero: React.FC = () => {
+  const [showLine, setShowLine] = useState<boolean>(false);
   useEffect(() => {
     setShowLine(true);
   }, []);

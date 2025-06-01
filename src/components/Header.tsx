@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Sun, Moon } from "lucide-react";
 import { ApplicationLogo } from "./ApplicationLogo";
 import LinkButton from "./LinkButton";
 import EkiliRelay from "ekilirelay";
 
-const Header = () => {
+const Header: React.FC = () => {
   // State to manage theme (light/dark)
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
   useEffect(() => {
     // Checking localStorage for saved theme

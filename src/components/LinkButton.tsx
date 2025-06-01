@@ -1,6 +1,11 @@
-// import React from 'react'
+import React from 'react';
 
-const LinkButton = ({ to, children }) => {
+interface LinkButtonProps {
+  to: string;
+  children: React.ReactNode;
+}
+
+const LinkButton: React.FC<LinkButtonProps> = ({ to, children }) => {
   return (
     <a
       href={to}

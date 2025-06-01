@@ -1,11 +1,17 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
-const Card = ({ children, className, onClick }) => {
+interface CardProps {
+  children: React.ReactNode;
+  className?: string;
+  onClick?: () => void;
+}
+
+const Card: React.FC<CardProps> = ({ children, className, onClick }) => {
   // State to track the cursor position relative to the card
-  const [hoverPosition, setHoverPosition] = useState({ x: 0, y: 0 });
+  const [hoverPosition, setHoverPosition] = useState({ x: 0, y: 0, width: 0, height: 0 });
 
   // Function to handle mouse movement over the card
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
     setHoverPosition({
       x: e.clientX - rect.left, // Cursor X relative to the card
