@@ -1,5 +1,3 @@
-
-
 export const ApplicationLogo = () => {
   return (
     <svg className="w-8 h-8 fill-current text-neutral-900 dark:text-neutral-100" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xmlSpace="preserve">
