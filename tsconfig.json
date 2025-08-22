@@ -2,6 +2,7 @@
   // ...existing code...
   "references": [],
     "compilerOptions": {
+      "jsx": "react-jsx",
       "baseUrl": ".",
       "paths": {
         "@/*": ["./src/*"]
